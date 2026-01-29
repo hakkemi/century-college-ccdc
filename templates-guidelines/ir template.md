@@ -1,0 +1,36 @@
+To: White Team 
+From: Team 00 
+Subject: IR Report - (Short Description)
+
+Jan 31, 2026 | 00:00 AM
+
+At 00:00, Team 00 identified (reverse shell/unauthorized account/service outage) on (Affected Host/Service).
+
+Security Risk Monitoring Summary: (Current status and ongoing monitoring efforts)
+
+Description of Attack: 
+
+- Affected Systems: 
+- User Impact: 
+- Risk Level:
+
+Timeline:
+
+    Source of Attack: (Attacker IP address/compromised account) 
+    Delivery Mechanism: (How the attack was delivered, e.g., exploit, weak password)
+
+In order to contain and remediate the incident, we performed the following:
+
+    00 | Identification: (Noticed suspicious process 'nc' running as root)
+    00 | Containment: (Blocked IP 10.x.x.x)
+    00 | Eradication: 
+    00 | Recovery:
+
+Remediation Recommendations: 
+ 
+Future Hardening: (Recommended security improvements to prevent recurrence)
+
+SUPPORTING EVIDENCE
+logs
+
+Thanks, Team 00

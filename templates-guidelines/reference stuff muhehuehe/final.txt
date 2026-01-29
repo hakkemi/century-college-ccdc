@@ -1,0 +1,60 @@
+Title: \[CVSS 10.0\] CRITICAL React2Shell VULNERABILITY   
+Organization: Technology  
+December 10th, 2025
+
+Hello CISO,
+
+	A pre-authentication remote code execution (RCE) vulnerability was discovered in the React Server Components (RSC) “Flight” protocol by [Lachlan Davidson](https://github.com/lachlan2k) on 29 November 2025 PT and promptly reported to the Meta team. The vulnerability is rated as a 10.0 on the CVSS scale, and is referred to as CVE-2025-55182.  
+As long as they support React Server Components, applications are vulnerable even if they don’t explicitly use server functions. Exploitation can (and some did) result in:
+
+- Credential harvesting  
+- Cryptomining  
+- Implementation of backdoors   
+- Deployment of DDoS botnets and RATs with rootkit style hiding 
+
+This is due to an unsafe deserialization vulnerability in the React Flight protocol, affecting server component payloads. This essentially allows attackers to craft malicious payloads through HTTP headers that, when processed by the server, can lead to RCE. All payloads are parsed, meaning the vulnerability is widely exploitable.
+
+Amazon threat intelligence teams saw active exploitation attempts by multiple China-nexus threat groups, including Earth Lamia and Jackpot Panda, which both attempted to exploit this vulnerability in AWS MadPot honeypots–decoys set up to capture threat actor behavior.
+
+As a front-end developer, my main concern lies in the confidentiality and integrity of our applications. The RCE vulnerability is a critical threat vector that can compromise our software supply chain, and whether or not our JS frameworks have Server Actions defined, they have the vulnerable RCE flaw accessible. This is a risk to our cloud credentials, developer and CI/CD secrets, and our applications in general. Backdoors through malware drops may be quietly implemented, so it is imperative that we remediate this issue.
+
+As an organization, we should do the following to remediate the issue:
+
+1. Prioritize internet-facing applications  
+2. Patch by upgrading absolutely all of our React and Next.js versions to the following:  
+   1. [**React patched versions**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**19.0.0 → 19.0.1**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**19.1.x → 19.1.2**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**19.2.0 → 19.2.1**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+   2. [**Next.js patched versions**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.0.5**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.1.9**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.2.6**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.3.6**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.4.8**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)   
+      * [**15.5.7**](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+      * 16.0.7  
+3. Keep an eye out for these at runtime:  
+   1. [Requests to RSC routes containing malformed or unexpected RSC Flight frames](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+   2. [High entropy or anomalous tokens in serialized RSC payloads](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+   3. [Sudden increases in server function invocation errors](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+4. Rotate all application secrets and credentials  
+5. Audit any and all workloads or extensions using RSC  
+6. Enable strict routing for RSC endpoints  
+7. [Rebuild applications after upgrading by ensuring CI/CD pipelines rebuild Docker images or serverless bundles](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+8. Conduct post-patch forensics to ensure no exploitation and exfiltration occurred
+
+Since this vulnerability can affect nearly 44% of all cloud environments, this is an issue that we MUST be on top of. The fact that it only requires a crafted HTTP header that always gets parsed means that the blast radius of this vulnerability is unusually wide.
+
+Best,
+
+
+Sources
+
+1. [React2Shell: Technical Deep-Dive & In-the-Wild Exploitation of CVE-2025-55182](https://www.wiz.io/blog/nextjs-cve-2025-55182-react2shell-deep-dive)  
+2. [Security Advisory: Critical RCE Vulnerabilities in React Server Components & Next.js | Snyk](https://snyk.io/blog/security-advisory-critical-rce-vulnerabilities-react-server-components/)  
+3. [React2Shell (CVE-2025-55182)](https://react2shell.com/)  
+4. [Security Advisory: CVE-2025-66478 |](https://nextjs.org/blog/CVE-2025-66478) [Next.js](http://Next.js)  
+5. [China-nexus cyber threat groups rapidly exploit React2Shell vulnerability (CVE-2025-55182) | AWS Security Blog](https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/)  
+6. [My NextJS server was compromised by React CVE-2025-55182 exploitation & multi-stage "Meshagent" malware](https://www.reddit.com/r/nextjs/comments/1pg5gft/my_nextjs_server_was_compromised_by_react/)  
+7. [Next.js & React vulnerability will break the internet](https://www.youtube.com/watch?v=MmdwakT-Ve8&t=251s)

@@ -1,0 +1,38 @@
+Title: npm Dependency Security Alert: Sha1-Hulud 2.0 Campaign  
+Organization: Technology  
+December 1st, 2025
+
+Hello CISO,
+
+	A critical attack was found in our systems on December 1st at 2:30 AM which is linked to the Sha1-Hulud 2.0 supply-chain campaign which was found November 24 at 01:22 UTC, which is most likely the result of trojanized (compromised) npm packages from the first iteration of the [Sha1-Hulud campaign in September](https://snyk.io/blog/embedded-malicious-code-in-tinycolor-and-ngx-bootstrap-releases-on-npm/). [Sha1-Hulud 2.0 continues the npm supply-chain attacks](https://www.wiz.io/blog/shai-hulud-2-0-ongoing-supply-chain-attack#what-is-this-campaign-5) by being more aggressive and by having a distinct self-propogating “worm” identity that exposes and exfiltrates credentials through public GitHub repositories. It does not just sit dormant, it actively searches for credentials in our repositories and attempts to spread itself. It is not known if the two attacks come from the same threat actor–and on that note, both campaigns have not been linked to any threat actors.
+
+As a Front-End Software Developer, my primary concern is the integrity of our software supply chain. Our applications rely on third-party npm packages, making us highly susceptible to this type of attack. The attacker's goal is to introduce backdoors and exfiltrate GitHub access tokens and credentials such as AWS, Google Cloud, and Azure. This may impact the final build of our products, compromising both our systems and potentially our customers' data.
+
+As an organization, we should do the following:
+
+- Remove and replace compromised packages
+
+  `npm cache clean \--force`
+
+  `rm \-rf node\_modules`
+
+- Pin clean versions of dependencies, or roll back to pre-November 21s, 2025 builds  
+- Rotate credentials by regenerating new tokens and credentials for npm, GitHub and cloud services  
+- Thoroughly audit our GitHub and CI/CD environments  
+  - Check for new repositories with "Sha1-Hulud" or “Sh1-Hulud: The Second Coming” in the description.  
+  - Review for unauthorized workflows or suspicious commits referencing “hulud”  
+  - Monitor for new npm publishes under the organization  
+- Harden pipelines  
+  - Restrict or disable lifecycle scripts (postinstall, preinstall) in CI/CD
+
+The fact that the malicious code can be hidden within legitimate-looking package versions means standard review processes may be insufficient.
+
+Best,
+
+
+Sources: 
+
+1. [Zero-day Extensive NPM Package Compromise \- Shai Hulud Supply Chain Attack](https://snyk.io/blog/embedded-malicious-code-in-tinycolor-and-ngx-bootstrap-releases-on-npm/)  
+2. [Defending Against Sha1-Hulud: The Second Coming](https://www.sentinelone.com/blog/defending-against-sha1-hulud-the-second-coming/)   
+3. [Shai-Hulud 2.0 Supply Chain Attack: 25K+ Repos Exposing Secrets](https://www.wiz.io/blog/shai-hulud-2-0-ongoing-supply-chain-attack)  
+4. [Shai-Hulud 2.0: Aggressive & Automated, One Of Fastest Spreading NPM Supply Chain Attacks Ever Observed](https://about.gitlab.com/blog/gitlab-discovers-widespread-npm-supply-chain-attack/)
