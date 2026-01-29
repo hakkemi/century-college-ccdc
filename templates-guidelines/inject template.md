@@ -43,4 +43,5 @@ command/log/code snippet
 
 ---
 
-**Thanks,** **Team 00**
+Thanks,  
+Team 00

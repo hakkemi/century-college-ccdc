@@ -16,7 +16,7 @@ January 31, 2026 | 00:00 AM [time sent]
 | **Affected Host**            | [Ecom, Wks]                      |
 | **Source IP Address**        | [Attacker IP]                    |
 | **Destination IP Address**   | [Internal IP of affected system] |
-| **Initial Access Timestamp** | [HH:MM AM/PM]                    |
+| **Initial Access Timestamp** | 00:00                |
 | **Service Downtime**         | 00:00 - 00:00                    |
 | **Remediated Timestamp**     | 00:00                            |
 | **Affected Account**         | [account used for access]        |
