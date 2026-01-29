@@ -1,6 +1,8 @@
-# Century CCDC Team Documentation & Checklists.
+# Century CCDC Team Documentation & Checklists
 
-self explainatory :pp
+Contains reference material for Century's CCDC team.
+forgot if the nextcloud supported markdown or not so now i have both .md & .txt!
+also our templates are formatted as emails because i find that easier to follow :)) heh.
 
 ---
 
@@ -29,5 +31,4 @@ self explainatory :pp
 | :------- | :------------- | :-------------------------------------------- |
 | **High** | Ingress Filter | Port 80, 443, 22, 3389?                       |
 | **Med**  | Egress Filter  | Block 4444, 6667, and non-standard high ports |
-| **Low** | gulp |
----
+| **Low**  | uhhhhhh        |                                               |
