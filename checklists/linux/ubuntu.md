@@ -1,8 +1,8 @@
-# ecom
-## change password
-In terminal:
-`passwd`
-# workstatoin
-## change password
-In terminal:
-`passwd`
+# ecom  
+## change password  
+In terminal:  
+`passwd`  
+# workstation  
+## change password  
+In terminal:  
+`passwd`  
