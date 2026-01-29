@@ -16,7 +16,7 @@ self explainatory :pp
     * [VyOS Router](https://github.com/hakkemi/century-college-ccdc/blob/main/checklists/vyos.md)
     * [Splunk](https://github.com/hakkemi/century-college-ccdc/blob/main/checklists/splunk.md)
 * [🕵️ Response Templates & Guidelines](https://github.com/hakkemi/century-college-ccdc/tree/main/templates-guidelines)
-    * [Inject Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/inject%20template.tx)
+    * [Inject Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/inject%20template.txt)
     * [Incident Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/ir%20template.txt)
     * [Incident Response Guidelines](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/ir%20guidelines.md)
 * [🦆 Other Resources](https://github.com/hakkemi/century-college-ccdc/tree/main/resources)
