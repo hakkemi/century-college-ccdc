@@ -18,9 +18,10 @@ also our templates are formatted as emails because i find that easier to follow 
     * [VyOS Router](https://github.com/hakkemi/century-college-ccdc/blob/main/checklists/vyos.md)
     * [Splunk](https://github.com/hakkemi/century-college-ccdc/blob/main/checklists/splunk.md)
 * [🕵️ Response Templates & Guidelines](https://github.com/hakkemi/century-college-ccdc/tree/main/templates-guidelines)
-    * [Inject Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/inject%20template.txt)
-    * [Incident Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/ir%20template.txt)
-    * [Incident Response Guidelines](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/ir%20guidelines.md)
+    * [Inject Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/injects/inject%20template.txt)
+    * [Incident Template](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/incidents/ir%20template.txt)
+    * [Incident Response Guidelines](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/incidents/ir%20guidelines.md)
+    * [Red Team Scoring](https://github.com/hakkemi/century-college-ccdc/blob/main/templates-guidelines/MWCCDC%20Red%20Team%20Scoring.md)
 * [🦆 Other Resources](https://github.com/hakkemi/century-college-ccdc/tree/main/resources)
     * [IR Playbooks](https://github.com/hakkemi/century-college-ccdc/blob/main/resources/ir%20playbook.md)
 
