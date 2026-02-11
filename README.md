@@ -1,6 +1,6 @@
-# Century CCDC Team Documentation & Checklists
+# Century Team Documentation & Checklists
 
-Contains reference material for Century's CCDC team.
+Contains reference material for Century's team
 forgot if the nextcloud supported markdown or not so now i have both .md & .txt!
 also our templates are formatted as emails because i find that easier to follow :)) heh.
 
